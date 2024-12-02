@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamada 2 J</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="chamada">
+    <h1 class="title">Chamada de Alunos</h1>
+        <table class="attendance-table">
+            <thead>
+                <tr>
+                    <th class="table-header">Nome do Aluno</th>
+                    <th class="table-header">Presente</th>
+                    <th class="table-header">Ausente</th>
+                </tr>
+            </thead>
+            <tbody id="student-list">
+                <tr class="table-row">
+                    <td class="student-name">Ana Silva</td>
+                    <td><input type="radio" name="attendance1" value="presente" class="attendance-radio"></td>
+                    <td><input type="radio" name="attendance1" value="ausente" class="attendance-radio"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="student-name">João Pereira</td>
+                    <td><input type="radio" name="attendance2" value="presente" class="attendance-radio"></td>
+                    <td><input type="radio" name="attendance2" value="ausente" class="attendance-radio"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="student-name">Maria Oliveira</td>
+                    <td><input type="radio" name="attendance3" value="presente" class="attendance-radio"></td>
+                    <td><input type="radio" name="attendance3" value="ausente" class="attendance-radio"></td>
+                </tr>
+                <!-- Adicione mais alunos aqui -->
+            </tbody>
+        </table>
+        <button id="submit-button" class="submit-button">Registrar Presença</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
