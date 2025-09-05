@@ -1,0 +1,1101 @@
+/********Geral**************/
+body{
+  background:no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /*background: linear-gradient(90deg, #f1dbff, #f1fff7); */
+    background: linear-gradient(90deg, #6a1b9a, #00c853);
+
+    font-style: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.obs{
+  margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #23939d;
+    font-style: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/******** PAINEL ADMIN - RESPONSIVO ********/
+.container {
+  max-width: 900px;
+  width: 90%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+.container h1 {
+  text-align: center;
+  color: #000000;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+form input, form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form button {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #23939d;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #1b747c;
+}
+
+/******** Mobile Ajustes ********/
+
+
+  @media (max-width: 600px) {
+    header#sair {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    header#sair .Btn {
+        display: block;
+        margin: 0 auto;
+        width: 50px;
+        height: 50px;
+        font-size: 0.9rem;
+        position: static;
+    }
+}
+
+/*********************LOGIN***********************/
+.login{
+    color: black;
+    font-size: xx-large;
+}
+.container-login {
+    background-color: rgb(255, 255, 255);
+    width: 340px;
+    padding: 30px;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0);
+    text-align: center;
+    border-radius: 25px;
+}
+
+.dark-mode .container-login {
+    background-color: rgb(255, 255, 255);
+    width: 340px;
+    padding: 30px;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0);
+    text-align: center;
+    border-radius: 25px;
+    color:#000000
+}
+
+.logo {
+    width: 80%;
+    height: auto;
+}
+.email{
+    height: 0.5px;
+    width: 80%;
+    border: outset;
+    outline: none;
+    border-radius: 10px;
+    color: #000000;
+    padding: 00040px;
+    background: rgba(255, 255, 255, 0);
+}
+.senha{
+    height: 5px;
+    width: 80%;
+    border: outset;
+    outline: none;
+    border-radius: 10px;
+    color: #000000;
+    padding: 00040px;
+    background: rgba(255,255,255,0.1);
+}
+.senha input{
+  height: 5px;
+  width: 80%;
+  border: outset;
+  outline: none;
+  border-radius: 10px;
+  color: #000000;
+  padding: 00040px;
+  background: rgba(255,255,255,0.1);
+}
+
+.btn-login {
+  --color: #0059ff;
+  --color2: rgb(0, 0, 0);
+  padding: 0.8em 1.75em;
+  background-color: transparent;
+  border-radius: 6px;
+  border: .3px solid chartreuse;
+  transition: .5s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-weight: 300;
+  font-size: 17px;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+
+.btn-login::after, .btn-login::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  transition: .5s ease-out;
+  background-color: chartreuse;
+}
+
+.btn-login::before {
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn-login:hover::before {
+  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn-login:hover::after {
+  transform: skew(45deg) translate(-50%, -50%);
+}
+.btn-login:hover {
+  color: var(--color2);
+}
+
+.btn-login:active {
+  filter: brightness(.7);
+  transform: scale(.98);
+}
+/**********************HOME******************************************************************/
+pg1, header{
+    align-self:self-start;
+}
+img {
+  background: transparent;
+  mix-blend-mode: multiply; /* Tenta misturar com o fundo */
+}
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: rgb(255, 65, 65);
+}
+  .sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sign img {
+    width: 17px;
+  }
+
+  .text {
+    position: absolute;
+    right: -10%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+  }
+
+  .Btn:hover {
+    width: 125px;
+    border-radius: 40px;
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: -20px;
+  }
+
+  .Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+  }
+  
+  .Btn:active {
+    transform: translate(2px ,2px);
+  }
+#sair{
+    margin:1%;
+    padding: -1%;
+    position: absolute;
+    align-items: center;
+}
+.responsive-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.responsive-box {
+  background-color: #3ca33f;
+  color: white;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid #580bf1; /* Borda branca */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.responsive-box:hover {
+  background-color: #45a049; /* Cor de fundo ao passar o mouse */
+  transform: scale(1.05); /* Aumenta ligeiramente a caixa */
+}
+@media (max-width: 600px) {
+  .responsive-box {
+      flex-basis: 100%; /* Empilha as divs em telas menores */
+  }
+}
+.responsive-box a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.responsive-box a:hover {
+  color: #e2ffcd;
+}
+/***************************SAIR*********************************/
+.text{
+    color: white;
+    text-align: start;
+    display: block;
+    float: right;
+
+}
+/**********************************************************/
+.corpo-pag1{
+  color: #ffffff;
+}
+/***************************obs.html***********************/
+.obs{
+  .container-obs{
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+header {
+    text-align: center;
+    margin-top:  550px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+p {
+    color: #666;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+input [type=text]{
+  border-radius: 25px;
+}
+
+table {
+    width: 80%;
+    border-collapse: separate;
+    grid-column: initial;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+table th, table td {
+    text-align: left;
+    border: 1px solid #ddd;
+    margin-left: 20px;
+}
+
+table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    color: #333;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.transferido{
+  background: linear-gradient(72deg, #f36262, #ff0000);
+}
+
+.salvar {
+  margin-top: 30px;
+  margin-left: 650px;
+  background-color: #eee;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  width: 10em;
+  border-radius: 1rem;
+  color: rgb(23, 194, 37);
+  box-shadow: 0 0.4rem #dfd9d9;
+  cursor: pointer;
+  text-align: center;
+} 
+.salvar:active {
+  color: white;
+  box-shadow: 0 0.2rem #dfd9d9;
+  transform: translateY(0.2rem);
+} 
+.salvar:hover:not(:disabled) {
+  background: rgb(36, 211, 30);
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+} 
+.salvar:disabled {
+  cursor: auto;
+  color: grey;
+}}
+
+/***********************Chamada**********************************/
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.attendance-table, .table-header, .table-row {
+  border: 1px solid #ccc;
+}
+
+.table-header, .student-name {
+  text-align: center;
+  padding: 10px;
+}
+
+.table-header {
+  background-color: #f8f8f8;
+}
+
+.attendance-radio {
+  text-align: center;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .responsive-box {
+    flex-basis: 100%;
+  }
+}
+
+/* Variáveis globais */
+:root {
+    --primary-color: #23939d;
+    --secondary-color: #1b747c;
+    --text-color: #333;
+    --background-color: #fff;
+    --shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos gerais */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #f1dbff, #f1fff7);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container de login */
+.container-login {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.logo {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+
+.login-form {
+    width: 100%;
+}
+
+.login {
+    color: var(--text-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Formulário */
+.form-group {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.email, .senha {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.email:focus, .senha:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Botão de login */
+.btn-login {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Botão olho */
+#olho {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+/* Mensagens de erro */
+.error-message {
+    color: #ff0000;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container-login {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 320px) {
+    .container-login {
+        padding: 1rem;
+    }
+
+    .login {
+        font-size: 1.5rem;
+    }
+
+    .email, .senha {
+        padding: 0.6rem;
+    }
+}
+
+/* Ajustes para orientação paisagem em dispositivos móveis */
+@media (max-height: 480px) and (orientation: landscape) {
+    .container-login {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .logo {
+        width: 40%;
+        margin-bottom: 0;
+    }
+
+    .login-form {
+        width: 60%;
+    }
+}
+
+/* Estilos para a página de turmas */
+.turmas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.turma-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.turma-card:hover {
+    transform: translateY(-5px);
+}
+
+.turma-card h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.turma-card p {
+    color: #666;
+    margin: 8px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 15px;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.no-turmas {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+    grid-column: 1 / -1;
+}
+
+.error {
+    color: #dc3545;
+    text-align: center;
+    padding: 20px;
+    grid-column: 1 / -1;
+}
+
+/* Melhorias de responsividade para obs.php */
+@media (max-width: 800px) {
+  .obs .container-obs {
+    width: 100% !important;
+    max-width: 100vw;
+    padding: 8px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .obs table {
+    width: 100% !important;
+    margin-left: 0;
+    font-size: 0.95rem;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .obs table th, .obs table td {
+    font-size: 0.95rem;
+    padding: 6px 8px;
+  }
+  .obs header, .obs h1, .obs p {
+    margin-top: 0 !important;
+    font-size: 1rem;
+  }
+  .obs .salvar {
+    margin-left: 0 !important;
+    width: 100% !important;
+    display: block;
+    margin-top: 18px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .obs .container-obs {
+    padding: 2px;
+  }
+  .obs h1 {
+    font-size: 1.1rem;
+  }
+  .obs table th, .obs table td {
+    font-size: 0.85rem;
+    padding: 4px 4px;
+  }
+}
+
+/* Responsividade avançada para obs.php mobile */
+@media (max-width: 600px) {
+  .obs .container-obs {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0;
+    padding: 2vw 2vw 70px 2vw !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+  }
+  .obs header {
+    position: sticky;
+    top: 0;
+    background: #23939d;
+    z-index: 100;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .obs .voltar-btn {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    width: 100vw;
+    border-radius: 0 !important;
+    font-size: 1rem !important;
+    padding: 10px 0 !important;
+    margin: 0 !important;
+    z-index: 2000;
+    background: #1976d2;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .obs h1, .obs p {
+    font-size: 0.95rem !important;
+    margin: 0 0 2px 0;
+    padding: 0 2vw;
+  }
+  .obs table {
+    width: 100% !important;
+    min-width: 0;
+    font-size: 1rem !important;
+    display: block;
+    overflow-x: auto;
+    white-space: normal;
+  }
+  .obs table th, .obs table td {
+    max-width: none;
+    overflow: visible;
+    text-overflow: unset;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 1rem !important;
+    color: #222 !important;
+  }
+  .obs input[type="text"] {
+    width: 100% !important;
+    min-width: 0;
+    max-width: 100%;
+    font-size: 1rem !important;
+    color: #222 !important;
+  }
+  .obs .salvar {
+    position: static;
+    width: 100% !important;
+    margin: 18px 0 0 0 !important;
+    border-radius: 8px !important;
+    font-size: 1.1rem !important;
+    padding: 1.1em 0 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .obs table th.nome-col, .obs table td.nome-col {
+    max-width: 120px;
+    min-width: 90px;
+    width: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .obs table th {
+    position: sticky;
+    top: 0;
+    background: #f0f0f0;
+    z-index: 2;
+  }
+  .obs .salvar {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    width: 100vw !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    font-size: 1.1rem !important;
+    padding: 1.1em 0 !important;
+    z-index: 1000;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+  }
+  .obs input[type="text"] {
+    font-size: 0.92rem !important;
+    padding: 5px 4px !important;
+    width: 90px !important;
+    min-width: 60px;
+    max-width: 120px;
+    border-radius: 8px !important;
+  }
+  .obs .date-picker {
+    font-size: 0.95rem !important;
+    padding: 5px 7px !important;
+    border-radius: 7px !important;
+  }
+}
+
+/* Estilo especial para obs.php bonito e organizado */
+.obs .container-obs {
+  background: #f8fafc;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 24px 24px 80px 24px;
+  margin: 24px auto;
+  max-width: 900px;
+}
+.obs header {
+  background: linear-gradient(90deg, #23939d 60%, #00c853 100%);
+  color: #fff;
+  border-radius: 14px 14px 0 0;
+  padding: 18px 18px 10px 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  position: relative;
+}
+.obs .turma-info-card {
+  background: #fff;
+  color: #23939d;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(35,147,157,0.08);
+  padding: 12px 18px;
+  margin: 12px auto 0 auto;
+  max-width: 600px;
+  font-size: 1.05rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.obs h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+.obs .voltar-btn {
+  background: #fff;
+  color: #23939d;
+  border: 2px solid #23939d;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 8px 22px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  box-shadow: 0 2px 8px rgba(35,147,157,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+.obs .voltar-btn:hover {
+  background: #23939d;
+  color: #fff;
+}
+.obs table {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(35,147,157,0.07);
+  margin-top: 18px;
+  background: #fff;
+}
+.obs table th, .obs table td {
+  border: 1px solid #e0e7ef;
+  padding: 10px 8px;
+  font-size: 1rem;
+}
+.obs table th {
+  background: #e0f7fa;
+  color: #23939d;
+  font-weight: 700;
+}
+.obs table tr:nth-child(even) {
+  background: #f4fafd;
+}
+.obs table tr:nth-child(odd) {
+  background: #fff;
+}
+.obs table tr:hover {
+  background: #e0f2f1;
+}
+.obs input[type="text"] {
+  border: 1.5px solid #b2dfdb;
+  border-radius: 7px;
+  padding: 7px 8px;
+  font-size: 1rem;
+  background: #f8fafc;
+  transition: border 0.2s;
+}
+.obs input[type="text"]:focus {
+  border: 1.5px solid #23939d;
+  outline: none;
+  background: #fff;
+}
+.obs .salvar {
+  background: linear-gradient(90deg, #23939d 60%, #00c853 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  width: 220px;
+  margin: 28px auto 0 auto;
+  display: block;
+  padding: 14px 0;
+  box-shadow: 0 2px 8px rgba(35,147,157,0.10);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.obs .salvar:hover {
+  background: #00c853;
+}
+.obs .success-message, .obs .error-message {
+  margin: 12px auto;
+  max-width: 400px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-align: center;
+}
+.obs .success-message {
+  background: #e0f7fa;
+  color: #23939d;
+}
+.obs .error-message {
+  background: #ffebee;
+  color: #d32f2f;
+}
+@media (max-width: 700px) {
+  .obs .container-obs {
+    padding: 6px 2vw 80px 2vw;
+    margin: 0;
+    border-radius: 0;
+  }
+  .obs .turma-info-card {
+    padding: 8px 6px;
+    font-size: 0.98rem;
+  }
+  .obs table th, .obs table td {
+    font-size: 0.93rem;
+    padding: 7px 4px;
+  }
+  .obs .salvar {
+    width: 100%;
+    font-size: 1.05rem;
+    padding: 13px 0;
+  }
+}
+
+/* Organização visual para obs.php */
+.obs-header {
+  background: linear-gradient(90deg, #23939d 60%, #00c853 100%);
+  color: #fff;
+  border-radius: 14px 14px 0 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 0 0 10px 0;
+  margin-bottom: 0;
+}
+.obs-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 18px 0 0 0;
+}
+.obs-header-row .voltar-btn {
+  margin: 0 18px 0 0;
+  align-self: flex-start;
+}
+.obs-header-row h1 {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.obs-main-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 12px 40px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.obs-date-form {
+  margin: 18px auto 0 auto;
+  max-width: 350px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.obs-date-label {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.obs-table-form {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.obs-table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+.obs-salvar-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+.obs-footer {
+  text-align: center;
+  margin-top: 24px;
+  color: #888;
+  font-size: 0.98rem;
+}
+@media (max-width: 700px) {
+  .obs-header-row {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 0 0 0;
+  }
+  .obs-header-row .voltar-btn {
+    margin: 0 0 0 0;
+    width: 100%;
+  }
+  .obs-header-row h1 {
+    font-size: 1.1rem;
+  }
+  .obs-main-container {
+    padding: 0 2vw 40px 2vw;
+  }
+  .obs-table-form {
+    max-width: 100vw;
+  }
+}
+
+

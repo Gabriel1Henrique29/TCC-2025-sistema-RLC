@@ -1,0 +1,9 @@
+Administrador:
+Email: admin@rlc.com
+Senha: admin123
+Pedagogo:
+Email: pedagogo@rlc.com
+Senha: pedagogo123
+Representante:
+Email: representante@rlc.com
+Senha: representante123     

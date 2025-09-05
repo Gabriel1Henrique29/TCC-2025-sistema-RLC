@@ -1,0 +1,114 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RLC</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <style>
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            display: none;
+            z-index: 1000;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="login">
+    <header></header>
+    <div></div><div></div><div></div><div></div>
+    <div class="dark-mode">
+    <div class="container-login">
+        <img src="./img/RLClogo.jpg" alt="RLC Logo" class="logo">
+        <div class="login-form">
+            <h1 class="login">Login</h1>
+            <form action="php/login_rlc.php" method="POST">
+                <div class="form-group">
+                    <input type="email" placeholder="Email" class="email" name="email" required>
+                </div>
+                <div class="form-group" id="senha-wrapper">
+                    <input type="password" id="senha" placeholder="Senha" name="senha" class="senha" required>
+                    <button type="button" onclick="toggleSenha()" id="olho" aria-label="Mostrar/Ocultar senha">👁</button>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-login">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    <!-- Notificação de Logout -->
+    <div id="logoutNotification" class="notification">
+        Logout realizado com sucesso!
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Verifica se há mensagem de erro
+        if (urlParams.has('erro')) {
+            alert("Email ou senha incorretos!");
+        }
+        
+        // Verifica se há mensagem de logout bem-sucedido
+        if (urlParams.has('logout') && urlParams.get('logout') === 'success') {
+            const notification = document.getElementById('logoutNotification');
+            notification.style.display = 'block';
+            
+            // Remove a notificação após 3 segundos
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+
+        function toggleSenha() {
+            let senha = document.getElementById("senha");
+            senha.type = senha.type === "password" ? "text" : "password";
+        }
+
+        // Ajuste responsivo do botão olho
+        function ajustarOlho() {
+            const wrapper = document.getElementById("senha-wrapper");
+            const input = document.getElementById("senha");
+            const olho = document.getElementById("olho");
+
+            wrapper.style.position = "relative";
+            wrapper.style.display = "inline-block";
+            wrapper.style.width = "100%";
+
+            olho.style.position = "absolute";
+            olho.style.top = "50%";
+            olho.style.right = "10px";
+            olho.style.transform = "translateY(-50%)";
+            olho.style.border = "none";
+            olho.style.background = "none";
+            olho.style.cursor = "pointer";
+            olho.style.padding = "0";
+            olho.style.fontSize = "18px";
+        }
+
+        // Ajustar em carregamento e redimensionamento
+        window.addEventListener('load', ajustarOlho);
+        window.addEventListener('resize', ajustarOlho);
+    </script>
+</body>
+</html>
