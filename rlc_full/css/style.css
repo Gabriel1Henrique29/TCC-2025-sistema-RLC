@@ -13,6 +13,14 @@ body{
     font-style: normal;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+/* Ajustes específicos para a página de Relatórios */
+.relatorios{
+  display: block;
+  min-height: 100vh;
+  height: auto;
+  align-items: initial;
+  justify-content: initial;
+}
 .obs{
   margin: 0;
     padding: 0;
