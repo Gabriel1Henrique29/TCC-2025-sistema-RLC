@@ -1,4 +1,15 @@
-<?php // pg2.php convertido de pg2.html ?>
+<?php // pg2.php convertido de pg2.html
+session_start();
+if (!isset($_SESSION['id_usuario'])) {
+    header('Location: ../index.html');
+    exit;
+}
+$nivel = $_SESSION['nivel_acesso'] ?? '';
+if ($nivel !== 'pedagogo' && $nivel !== 'coordenador') {
+    header('Location: ../index.html');
+    exit;
+}
+?>
 <!--pg2.html e para as pedagogas e cordenadores --> 
 <!DOCTYPE html>
 <html lang="pt-br">

@@ -1,4 +1,10 @@
-<?php // chamada.php convertido de chamada.html ?>
+<?php // chamada.php convertido de chamada.html
+session_start();
+if (!isset($_SESSION['id_usuario']) || ($_SESSION['nivel_acesso'] ?? null) !== 'representante') {
+    header('Location: ../index.html');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
