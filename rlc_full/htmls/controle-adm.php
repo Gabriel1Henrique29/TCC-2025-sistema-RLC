@@ -1,4 +1,10 @@
-<?php // controle-adm.php convertido de controle-adm.html ?>
+<?php // controle-adm.php convertido de controle-adm.html
+session_start();
+if (!isset($_SESSION['id_usuario']) || ($_SESSION['nivel_acesso'] ?? null) !== 'adm') {
+    header('Location: ../index.html');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
