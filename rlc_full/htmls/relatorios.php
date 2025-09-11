@@ -75,6 +75,11 @@ $turmas = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <p><b>Total de alunos:</b> <?= (int)$turma['total_alunos'] ?></p>
                         <p><b>Coordenador(a):</b> <?= htmlspecialchars($turma['nome_coordenador'] ?? '—') ?></p>
                         <p><b>Pedagogo(a):</b> <?= htmlspecialchars($turma['nome_pedagogo'] ?? '—') ?></p>
+                        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+                            <a class="btn btn-primary" href="relatorios_detalhes.php?id_turma=<?= (int)$turma['id_turma'] ?>">Detalhes</a>
+                            <a class="btn btn-secondary" href="relatorios_observacoes.php?id_turma=<?= (int)$turma['id_turma'] ?>">Observações</a>
+                            <a class="btn" style="background:#28a745;color:#fff;" href="../php/exportar_relatorio_csv.php?id_turma=<?= (int)$turma['id_turma'] ?>">Exportar CSV</a>
+                        </div>
                     </article>
                 <?php endforeach; ?>
             </section>
